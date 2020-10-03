@@ -1,0 +1,138 @@
+* {margin: 0; padding: 0;}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #4d4d4d;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, serif;
+}
+
+.game .header {
+    display: flex;
+    flex-direction: row;
+    height: 9vmin;
+    width: 100%;
+    font-size: 30px;
+    box-sizing: border-box;
+    color: #f0047f;
+    flex-grow: 0;
+    justify-content: center;
+}
+
+.game .header .score {
+    width: 50%;
+    text-align: left;
+    margin-top: 2vmin;
+}
+
+.game .header .record {
+    width: 50%;
+    text-align: right;
+    margin-top: 2vmin;
+}
+
+.game .field {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.game .field .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10%;
+    font-size: 10vmin;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    transition: background-image 0.2s ease-in-out, height 0.2s, width 0.2s, margin 0.2s;
+}
+
+.game .field .cell[data-ship="2"] {
+    background-image: url(../img/2_pts.png);
+}
+
+.game .field .cell[data-ship="4"] {
+    background-image: url(../img/4_pts.png);
+}
+
+.game .field .cell[data-ship="8"] {
+    background-image: url(../img/8_pts.png);
+}
+
+.game .field .cell[data-ship="16"] {
+    background-image: url(../img/16_pts.png);
+}
+
+.game .field .cell[data-ship="32"] {
+    background-image: url(../img/32_pts.png);
+}
+
+.game .field .cell[data-ship="64"] {
+    background-image: url(../img/64_pts.png);
+}
+
+.game .field .cell[data-ship="128"] {
+    background-image: url(../img/128_pts.png);
+}
+
+.game .field .cell[data-ship="256"] {
+    background-image: url(../img/256_pts.png);
+}
+
+.game .field .cell[data-ship="512"] {
+    background-image: url(../img/512_pts.png);
+}
+
+.game .field .cell[data-ship="1024"] {
+    background-image: url(../img/1024_pts.png);
+}
+
+.game .field .cell[data-ship="2048"] {
+    background-image: url(../img/2048_pts.png);
+}
+
+.game .field .cell.hightlight {
+    margin: 0;
+}
+
+@keyframes hide {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.game .field .cell.animate {
+    position: absolute;
+    margin: 0;
+    transition: left 0.2s, top 0.2s;
+    z-index: -1;
+    animation-name: hide;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
