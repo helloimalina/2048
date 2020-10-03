@@ -24,7 +24,7 @@ html, body {
     flex-direction: row;
     height: 9vmin;
     width: 100%;
-    font-size: 10vmin;
+    font-size: 10px;
     box-sizing: border-box;
     color: #f0047f;
     flex-grow: 0;
