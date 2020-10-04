@@ -32,16 +32,18 @@ html, body {
 }
 
 .game .header .score {
-    width: 50%;
+    width: 40%;
     text-align: left;
+    font-family: Arial, serif;
+    margin-right: 5px;
     margin-top: 2vmin;
-}
 
 .game .header .record {
-    width: 50%;
+    width: 40%;
     text-align: right;
+    font-family: Arial, serif;
+    margin-left: 5px;
     margin-top: 2vmin;
-}
 
 .game .field {
     position: relative;
