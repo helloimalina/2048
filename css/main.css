@@ -7,8 +7,8 @@ html, body {
 }
 
 .game {
-    position: relative;
-    display: fixed;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
