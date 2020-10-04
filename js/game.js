@@ -100,6 +100,9 @@ class Game {
 
     addScore(value) {
         this.score += value;
+        if (this.score >= 2048) {
+            this.fieldElement.innerHTML = '<img src="../img/Game_T_Final-04.png" alt="">';
+        }
     }
 
     spawnUnit() {
