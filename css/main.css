@@ -24,7 +24,8 @@ html, body {
     flex-direction: row;
     height: 9vmin;
     width: 100%;
-    font-size: 10px;
+    font-size: 5vmin;
+    font-family: Arial, serif;
     box-sizing: border-box;
     color: #f0047f;
     flex-grow: 0;
