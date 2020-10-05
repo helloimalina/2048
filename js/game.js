@@ -103,6 +103,13 @@ class Game {
     }
 
     spawnUnit() {
+        if (this.find2048Cell()) {
+            // закончить все анимации
+            setTimeout(function() {
+                this.win();
+            }.bind(this), 300);
+        }
+            
         let emptyCells = this.getEmptyCells();
         if (emptyCells.length) {
             emptyCells[getRandomInt(0, emptyCells.length - 1)].spawn();
@@ -118,8 +125,18 @@ class Game {
         }
     }
 
-    getEmptyCells()
-    {
+    find2048Cell() {
+        for (let i = 0; i < this.size; i++) {
+            for (let k = 0; k < this.size; k++) {
+                if (this.field[i][k].value === 2048) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    getEmptyCells() {
         let emptyCells = [];
 
         for (let i = 0; i < this.field.length; i++) {
@@ -260,7 +277,7 @@ class Game {
         }
         return false;
     }
-    
+
     restart() {
         if (this.score > this.record) {
             this.record = this.score;
@@ -275,5 +292,12 @@ class Game {
                 this.field[i][k] = new Cell(this.fieldElement, this);
             }
         }
+    }
+    
+    win() {
+        if (this.score > this.record) {
+            this.record = this.score;
+        }
+        this.fieldElement.innerHTML = '<img src="img/Game_T_Final-04.png" alt="">';
     }
 }
