@@ -141,3 +141,10 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+.game .restart {
+    navbutton_background_color: #f0047f;
+    width: 40%;
+    text-align: right;
+    font-family: Arial, serif;
+    margin-top: 2vmin;
+}
