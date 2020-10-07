@@ -80,7 +80,6 @@ let onSwipe = function(direction, callback) {
 }
 // end of touch helper
 
-
-let fieldSize = parseInt(window.prompt('Field size?', 4), 10);
+let fieldSize = 4
 
 let game = new Game(document.body, fieldSize || 4);

@@ -119,8 +119,7 @@ class Game {
         if (!emptyCells.length && !this.hasMove()) {
             // закончить все анимации
             setTimeout(function() {
-                alert('May the force be with you');
-                this.restart();
+                this.loose();
             }.bind(this), 300);
         }
     }
@@ -279,9 +278,6 @@ class Game {
     }
 
     restart() {
-        if (this.score > this.record) {
-            this.record = this.score;
-        }
         this.score = 0;
         this.field = [];
         this.fieldElement.innerHTML = '';
@@ -293,11 +289,18 @@ class Game {
             }
         }
     }
-    
+
     win() {
         if (this.score > this.record) {
             this.record = this.score;
         }
-        this.fieldElement.innerHTML = '<img style="width:100%;height:100%" src="img/Game_T_Final-04.png" alt="">';
+        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_Final-04.png" alt="">';
+    }
+
+    loose() {
+        if (this.score > this.record) {
+            this.record = this.score;
+        }
+        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_Final-04.png" alt="">';
     }
 }
