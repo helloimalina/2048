@@ -119,7 +119,7 @@ class Game {
         if (!emptyCells.length && !this.hasMove()) {
             // закончить все анимации
             setTimeout(function() {
-                alert('You lose');
+                alert('May the force be with you');
                 this.restart();
             }.bind(this), 300);
         }
