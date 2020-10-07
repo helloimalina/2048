@@ -298,6 +298,6 @@ class Game {
         if (this.score > this.record) {
             this.record = this.score;
         }
-        this.fieldElement.innerHTML = '<img src="img/Game_T_Final-04.png" alt="">';
+        this.fieldElement.innerHTML = '<img style="width:100%;height:100%" src="img/Game_T_Final-04.png" alt="">';
     }
 }
