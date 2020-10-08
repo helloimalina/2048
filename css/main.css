@@ -133,10 +133,10 @@ html, body {
 .game .field .cell.animate {
     position: absolute;
     margin: 0;
-    transition: left 0.4s, top 0.4s;
+    transition: left 0.3s, top 0.3s;
     z-index: -1;
     animation-name: hide;
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
