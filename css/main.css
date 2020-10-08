@@ -145,10 +145,11 @@ html, body {
     border: none;
     background-color: #f0047f;
     color: #ffffff;
+    border-radius: 2vmin;
     font-family: Arial, serif;
-    margin-top: 2vmin;
-    font-size: 2vmin;
-    padding: 1vmin 2vmin;
+    margin-top: 1vmin;
+    font-size: 3vmin;
+    padding: 1vmin 5vmin;
 }
 
 .game .field .finish {
