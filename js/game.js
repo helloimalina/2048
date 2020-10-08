@@ -301,6 +301,6 @@ class Game {
         if (this.score > this.record) {
             this.record = this.score;
         }
-        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_Final-04.png" alt="">';
+        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_fail3-01.png" alt="">';
     }
 }
