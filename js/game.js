@@ -294,13 +294,13 @@ class Game {
         if (this.score > this.record) {
             this.record = this.score;
         }
-        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_Final-04.png" alt="">';
+        tthis.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_5-01.png" alt="">';
     }
 
     loose() {
         if (this.score > this.record) {
             this.record = this.score;
         }
-        this.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_fail3-01.png" alt="">';
+        tthis.fieldElement.innerHTML = '<img class="finish" src="img/Game_T_fail5-01.png" alt="">';
     }
 }
