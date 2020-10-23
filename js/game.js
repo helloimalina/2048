@@ -58,6 +58,7 @@ class Game {
         this.restart();
 
         window.addEventListener('keyup', function(e) {
+            e.stopPropagation();
             switch (e.keyCode) {
                 case 38:
                     this.moveUp();
